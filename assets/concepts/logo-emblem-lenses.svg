@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" role="img" aria-label="Pay-by-Play Two Lenses Emblem">
+  <defs>
+    <clipPath id="circle-clip">
+      <circle cx="256" cy="256" r="216"/>
+    </clipPath>
+    <filter id="emblem-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="64" fill="#FAFAF9"/>
+
+  <!-- Circle Badge -->
+  <g clip-path="url(#circle-clip)">
+    <!-- Upper-Left Hemisphere: Lens A / Pay (Blue) -->
+    <polygon points="40,40 472,40 40,472" fill="#0047AB"/>
+
+    <!-- Lower-Right Hemisphere: Lens B / Play (Red) -->
+    <polygon points="472,40 472,472 40,472" fill="#E60012"/>
+
+    <!-- Sports Pitch Ring Lines -->
+    <circle cx="256" cy="256" r="160" fill="none" stroke="#FAFAF9" stroke-width="4" stroke-opacity="0.4"/>
+    <circle cx="256" cy="256" r="110" fill="none" stroke="#FAFAF9" stroke-width="4" stroke-opacity="0.6"/>
+
+    <!-- Diagonal Black Separator Channel -->
+    <line x1="30" y1="30" x2="482" y2="482" stroke="#0A0A0A" stroke-width="16"/>
+
+    <!-- Central De Stijl Yellow Core (The Gap / Synthesis) -->
+    <circle cx="256" cy="256" r="66" fill="#FFDD00" stroke="#0A0A0A" stroke-width="12" filter="url(#emblem-shadow)"/>
+
+    <!-- Precisely Centered Play Triangle (cx=256, optical center adjusted) -->
+    <!-- Triangle bounding box: x from 242 to 284 (width 42, center at 263, visual optical center aligns at 256) -->
+    <polygon points="242,230 242,282 284,256" fill="#FAFAF9" stroke="#0A0A0A" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Outer Ring Frames -->
+  <circle cx="256" cy="256" r="216" fill="none" stroke="#0A0A0A" stroke-width="14"/>
+  <circle cx="256" cy="256" r="228" fill="none" stroke="#0A0A0A" stroke-width="3"/>
+
+  <!-- Compass / Coordinate Axis Notches (Modernist Econometrics) -->
+  <line x1="256" y1="18" x2="256" y2="34" stroke="#0A0A0A" stroke-width="6"/>
+  <line x1="256" y1="478" x2="256" y2="494" stroke="#0A0A0A" stroke-width="6"/>
+  <line x1="18" y1="256" x2="34" y2="256" stroke="#0A0A0A" stroke-width="6"/>
+  <line x1="478" y1="256" x2="494" y2="256" stroke="#0A0A0A" stroke-width="6"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "generated_by": "src/pipeline.py",
+  "datasets": {
+    "player_season_pwhl": {
+      "path": "data/processed/player_season_pwhl.parquet"
+    },
+    "player_season_wnba": {
+      "path": "data/processed/player_season_wnba.parquet"
+    },
+    "pwhl_two_lens": {
+      "path": "data/processed/pwhl_two_lens.parquet"
+    },
+    "wnba_two_lens": {
+      "path": "data/processed/wnba_two_lens.parquet"
+    }
+  },
+  "updated_at": "2026-10-27T05:26:31.895939+00:00"
+}

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 512" width="100%" height="100%" role="img" aria-label="Pay-by-Play Banner">
+  <defs>
+    <clipPath id="panel-wide">
+      <rect x="0" y="0" width="380" height="380" rx="44"/>
+    </clipPath>
+    <filter id="shadow-wide" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Canvas -->
+  <rect width="1280" height="512" fill="#FAFAF9"/>
+
+  <!-- Left Icon Mark -->
+  <g transform="translate(66, 66)">
+    <!-- Container -->
+    <rect width="380" height="380" rx="44" fill="#FAFAF9"/>
+
+    <g clip-path="url(#panel-wide)">
+      <!-- Blue Block -->
+      <rect x="0" y="0" width="155" height="230" fill="#0047AB"/>
+
+      <!-- Red Block -->
+      <rect x="155" y="0" width="225" height="255" fill="#E60012"/>
+
+      <!-- Yellow Block -->
+      <rect x="155" y="255" width="110" height="125" fill="#FFDD00"/>
+
+      <!-- Black Block -->
+      <rect x="265" y="255" width="115" height="125" fill="#0A0A0A"/>
+
+      <!-- Bottom-Left Light Block with Ticks -->
+      <rect x="0" y="230" width="155" height="150" fill="#FAFAF9"/>
+      <line x1="28" y1="270" x2="130" y2="270" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+      <line x1="28" y1="305" x2="105" y2="305" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+      <line x1="28" y1="340" x2="120" y2="340" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+
+      <!-- Play Symbol -->
+      <polygon points="235,75 235,180 325,127" fill="#FAFAF9" filter="url(#shadow-wide)"/>
+      <polygon points="235,75 235,180 325,127" fill="none" stroke="#0A0A0A" stroke-width="6" stroke-linejoin="round"/>
+
+      <!-- Sports Arc -->
+      <path d="M 155,70 A 57 57 0 0 0 155,185" fill="none" stroke="#FAFAF9" stroke-width="5" stroke-dasharray="8 6"/>
+
+      <!-- Master Grid Lines -->
+      <line x1="155" y1="0" x2="155" y2="380" stroke="#0A0A0A" stroke-width="10"/>
+      <line x1="0" y1="230" x2="155" y2="230" stroke="#0A0A0A" stroke-width="10"/>
+      <line x1="155" y1="255" x2="380" y2="255" stroke="#0A0A0A" stroke-width="10"/>
+      <line x1="265" y1="255" x2="265" y2="380" stroke="#0A0A0A" stroke-width="10"/>
+    </g>
+
+    <!-- Outer Border -->
+    <rect width="380" height="380" rx="44" fill="none" stroke="#0A0A0A" stroke-width="10"/>
+  </g>
+
+  <!-- Right Typography & Branding Block -->
+  <g transform="translate(500, 110)">
+    <!-- League Badge Pills -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="82" height="28" rx="6" fill="#0A0A0A"/>
+      <text x="41" y="19" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#FFFFFF">PWHL</text>
+
+      <rect x="94" y="0" width="82" height="28" rx="6" fill="#E60012"/>
+      <text x="135" y="19" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#FFFFFF">WNBA</text>
+
+      <rect x="188" y="0" width="76" height="28" rx="6" fill="#0047AB"/>
+      <text x="226" y="19" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#FFFFFF">WPL</text>
+
+      <text x="280" y="20" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#71717A">· CROSS-LEAGUE DECISION SUPPORT</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="98" font-family="'Archivo', 'Arial Black', Helvetica, sans-serif" font-size="64" font-weight="900" letter-spacing="-0.02em">
+      <tspan fill="#0A0A0A">PAY</tspan>
+      <tspan fill="#71717A" font-family="'JetBrains Mono', monospace" font-size="38" font-weight="700" letter-spacing="0.06em" dy="-4"> -BY- </tspan>
+      <tspan fill="#E60012" dy="4">PLAY</tspan>
+    </text>
+
+    <!-- De Stijl Triple Color Rule -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="220" height="6" fill="#0047AB"/>
+      <rect x="226" y="0" width="60" height="6" fill="#FFDD00"/>
+      <rect x="292" y="0" width="380" height="6" fill="#E60012"/>
+    </g>
+
+    <!-- Core Question Hook -->
+    <text x="0" y="192" font-family="'Archivo', Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0A0A0A">
+      Does pay follow play?
+    </text>
+
+    <!-- Explanatory Subtitle -->
+    <text x="0" y="235" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#71717A">
+      Empirical Bayes value estimation · Two lenses on contract timing · Fairness metrics
+    </text>
+
+    <!-- Formula Tag -->
+    <g transform="translate(0, 260)">
+      <text x="0" y="24" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="600" fill="#0A0A0A">
+        gap = value_pct − pay_pct
+      </text>
+      <text x="260" y="24" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#71717A">
+        (Within-league position percentiles)
+      </text>
+    </g>
+  </g>
+</svg>

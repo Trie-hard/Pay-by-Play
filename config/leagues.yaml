@@ -1,0 +1,66 @@
+# League constants and Definition of Done thresholds (spec v1.1)
+
+pwhl:
+  league_id: PWHL
+  pay_currency: USD
+  pay_type: salary
+  lens_a:
+    pay_season: "2026-27"
+    value_season: "2025-26"
+  lens_b:
+    pay_season: "2026-27"
+    value_season: "2026-27"
+  cap:
+    target_avg_salary: 60099.99
+    avg_band_pct: 0.10
+  regulars:
+    min_games: 10
+  value_definitions:
+    A: box_score_per_game
+    B: box_score_plus_on_ice_share
+    C: box_score_position_weight_sensitivity
+  checksum_teams:
+    Boston:
+      expected_total: 1436173.50
+      expected_contracts: 25
+
+wnba:
+  league_id: WNBA
+  pay_currency: USD
+  pay_type: salary
+  lens_a:
+    pay_season: 2026
+    value_season: 2025
+  lens_b:
+    pay_season: 2026
+    value_season: 2026
+  cap:
+    salary_cap_usd: 7000000
+  regulars:
+    min_games: 15
+  value_definitions:
+    A: per_minute_box_composite
+    B: box_plus_wehoop_impact
+    C: minutes_weighted_robust
+
+wpl:
+  league_id: WPL
+  pay_currency: INR
+  pay_type: auction
+  lens_a:
+    pay_season: 2026
+    value_season: 2025
+  lens_b:
+    pay_season: 2026
+    value_season: 2026
+  regulars:
+    min_balls_faced_or_bowled: 60
+  value_definitions:
+    A: phase_runs_added
+    B: phase_runs_plus_wicket_value
+    C: career_shrunk_phase_value
+
+confidence:
+  bootstrap_reps: 1000
+  ci_level: 0.80
+  bargain_ci_strictly_above_zero: true

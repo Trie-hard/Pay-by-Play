@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" role="img" aria-label="Pay-by-Play Logo">
+  <defs>
+    <clipPath id="top-panel">
+      <rect x="36" y="36" width="440" height="300" rx="28"/>
+    </clipPath>
+    <filter id="glow-play" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="16" y="16" width="480" height="480" rx="48" fill="#FAFAF9"/>
+  <rect x="16" y="16" width="480" height="480" rx="48" fill="none" stroke="#0A0A0A" stroke-width="10"/>
+
+  <!-- Upper Visual Panel -->
+  <g clip-path="url(#top-panel)">
+    <!-- Base Paper Fill -->
+    <rect x="36" y="36" width="440" height="300" fill="#FAFAF9"/>
+
+    <!-- Blue Field (Pay) -->
+    <rect x="36" y="36" width="180" height="210" fill="#0047AB"/>
+
+    <!-- Red Field (Play) -->
+    <rect x="216" y="36" width="260" height="210" fill="#E60012"/>
+
+    <!-- Yellow Accent Block -->
+    <rect x="216" y="246" width="124" height="90" fill="#FFDD00"/>
+
+    <!-- Ink Block -->
+    <rect x="340" y="246" width="136" height="90" fill="#0A0A0A"/>
+
+    <!-- Bottom Left Subtle Ledger Lines -->
+    <line x1="60" y1="270" x2="190" y2="270" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+    <line x1="60" y1="300" x2="155" y2="300" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Central Play Arrow (Optically centered at x=346, y=141) -->
+    <polygon points="305,95 305,187 385,141" fill="#FAFAF9" filter="url(#glow-play)"/>
+    <polygon points="305,95 305,187 385,141" fill="none" stroke="#0A0A0A" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Hockey / Basketball Sports Arc Accent -->
+    <path d="M 216,91 A 50 50 0 0 0 216,191" fill="none" stroke="#FAFAF9" stroke-width="5" stroke-dasharray="8 6"/>
+
+    <!-- Grid Dividing Lines -->
+    <line x1="216" y1="36" x2="216" y2="336" stroke="#0A0A0A" stroke-width="10"/>
+    <line x1="36" y1="246" x2="476" y2="246" stroke="#0A0A0A" stroke-width="10"/>
+    <line x1="340" y1="246" x2="340" y2="336" stroke="#0A0A0A" stroke-width="10"/>
+  </g>
+  <!-- Border around panel -->
+  <rect x="36" y="36" width="440" height="300" rx="28" fill="none" stroke="#0A0A0A" stroke-width="8"/>
+
+  <!-- Horizontal Divider Line -->
+  <line x1="36" y1="362" x2="476" y2="362" stroke="#0A0A0A" stroke-width="6"/>
+
+  <!-- Typography: PAY -BY- PLAY -->
+  <text x="256" y="428" text-anchor="middle" font-family="'Archivo', 'Arial Black', Helvetica, sans-serif" font-size="40" font-weight="900" letter-spacing="0.04em">
+    <tspan fill="#0A0A0A">PAY</tspan>
+    <tspan fill="#71717A" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="24" font-weight="700" letter-spacing="0.08em" dy="-3"> -BY- </tspan>
+    <tspan fill="#E60012" dy="3">PLAY</tspan>
+  </text>
+
+  <!-- Subtitle Tagline -->
+  <text x="256" y="468" text-anchor="middle" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="13" font-weight="700" fill="#71717A" letter-spacing="0.26em">
+    WOMEN'S PRO SPORTS ECONOMETRICS
+  </text>
+</svg>

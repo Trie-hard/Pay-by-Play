@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay-by-Play — Brand Identity &amp; Logo System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ds-red: #E60012;
+      --ds-blue: #0047AB;
+      --ds-yellow: #FFDD00;
+      --ds-black: #0A0A0A;
+      --ds-paper: #FAFAF9;
+      --ds-gray: #71717A;
+      --ds-white: #FFFFFF;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0F1117;
+      color: #F1F5F9;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 2rem 1rem;
+    }
+
+    .doc-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      background: #18181B;
+      border: 1px solid #27272A;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Action Bar (hidden in print) */
+    .action-bar {
+      background: #121214;
+      border-bottom: 1px solid #27272A;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .action-btn {
+      background: #E60012;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.6rem 1.2rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+    .action-btn:hover {
+      background: #FF3333;
+      transform: translateY(-1px);
+    }
+
+    .secondary-btn {
+      background: #27272A;
+      color: #E4E4E7;
+      border: 1px solid #3F3F46;
+    }
+    .secondary-btn:hover {
+      background: #3F3F46;
+      color: white;
+    }
+
+    /* Cover / Hero */
+    .cover-header {
+      background: #FAFAF9;
+      color: #0A0A0A;
+      padding: 4rem 3rem 3.5rem;
+      position: relative;
+      border-bottom: 8px solid #0A0A0A;
+    }
+
+    .de-stijl-stripe {
+      display: flex;
+      height: 8px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .stripe-blue { flex: 2; background: #0047AB; }
+    .stripe-yellow { flex: 1; background: #FFDD00; }
+    .stripe-red { flex: 3; background: #E60012; }
+
+    .badge-pills {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+    .pill-black { background: #0A0A0A; color: #FAFAF9; }
+    .pill-red { background: #E60012; color: #FFFFFF; }
+    .pill-blue { background: #0047AB; color: #FFFFFF; }
+    .pill-yellow { background: #FFDD00; color: #0A0A0A; }
+
+    .hero-title {
+      font-family: 'Archivo', sans-serif;
+      font-size: 3.4rem;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .hero-title span.pay { color: #0A0A0A; }
+    .hero-title span.by { color: #71717A; font-family: 'JetBrains Mono', monospace; font-size: 2.2rem; font-weight: 700; }
+    .hero-title span.play { color: #E60012; }
+
+    .hero-tagline {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #18181B;
+      margin-bottom: 0.5rem;
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+      color: #71717A;
+      max-width: 720px;
+    }
+
+    /* Section Styles */
+    .doc-section {
+      padding: 3rem;
+      border-bottom: 1px solid #27272A;
+    }
+    .doc-section:last-child {
+      border-bottom: none;
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E60012;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-label::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: #E60012;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: #A1A1AA;
+      margin-bottom: 2rem;
+      max-width: 840px;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 1.75rem;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .grid-5 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    /* Cards */
+    .asset-card {
+      background: #1F1F23;
+      border: 1px solid #2E2E33;
+      border-radius: 14px;
+      padding: 1.5rem;
+      display: flex;
+      flex-col;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .asset-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #A1A1AA;
+    }
+
+    .asset-preview {
+      background: #FAFAF9;
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .asset-preview.dark-preview {
+      background: #0A0A0A;
+    }
+
+    .asset-card-footer {
+      margin-top: 1.25rem;
+      font-size: 0.85rem;
+      color: #D4D4D8;
+    }
+    .asset-card-footer strong {
+      color: white;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    /* Color Chips */
+    .color-chip {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #2E2E33;
+      background: #1F1F23;
+    }
+    .color-swatch {
+      height: 90px;
+      width: 100%;
+    }
+    .color-info {
+      padding: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+    }
+    .color-name {
+      font-weight: 700;
+      color: white;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .color-hex {
+      color: #FFDD00;
+      font-weight: 700;
+    }
+    .color-role {
+      font-size: 0.72rem;
+      color: #A1A1AA;
+      margin-top: 0.25rem;
+    }
+
+    /* Rules Table */
+    .rules-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .rules-table th, .rules-table td {
+      padding: 1rem 1.25rem;
+      text-align: left;
+      border-bottom: 1px solid #2E2E33;
+    }
+    .rules-table th {
+      background: #121214;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #A1A1AA;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .rules-table tr:hover td {
+      background: #1C1C20;
+    }
+    .badge-do {
+      color: #22C55E;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .badge-dont {
+      color: #EF4444;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Typography Showcase */
+    .type-specimen {
+      background: #1F1F23;
+      border: 1px solid #2E2E33;
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .type-specimen-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #2E2E33;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #A1A1AA;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+        padding: 0 !important;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .doc-container {
+        box-shadow: none !important;
+        border: none !important;
+        background: white !important;
+        max-width: 100% !important;
+      }
+      .doc-section {
+        background: white !important;
+        color: black !important;
+        border-bottom: 1px solid #E4E4E7 !important;
+        padding: 2rem 1.5rem !important;
+      }
+      .section-title {
+        color: black !important;
+      }
+      .section-lead {
+        color: #52525B !important;
+      }
+      .asset-card, .type-specimen, .color-chip {
+        background: #F4F4F5 !important;
+        border: 1px solid #D4D4D8 !important;
+        color: black !important;
+      }
+      .asset-card-footer strong, .color-name {
+        color: black !important;
+      }
+      .asset-card-footer, .color-role {
+        color: #52525B !important;
+      }
+      .rules-table th {
+        background: #E4E4E7 !important;
+        color: black !important;
+      }
+      .rules-table td {
+        border-bottom: 1px solid #E4E4E7 !important;
+        color: black !important;
+      }
+      .page-break {
+        page-break-after: always;
+        break-after: page;
+      }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="doc-container">
+
+    <!-- Action Bar -->
+    <div class="action-bar">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #A1A1AA;">
+        <strong>Pay-by-Play</strong> · Official Brand Specification Document
+      </div>
+      <div style="display: flex; gap: 0.75rem;">
+        <button class="action-btn secondary-btn" onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">
+          📦 Asset Matrix
+        </button>
+        <button class="action-btn" onclick="window.print()">
+          🖨️ Print / Save as PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- Cover Page -->
+    <header class="cover-header">
+      <div class="de-stijl-stripe">
+        <div class="stripe-blue"></div>
+        <div class="stripe-yellow"></div>
+        <div class="stripe-red"></div>
+      </div>
+
+      <div class="badge-pills">
+        <span class="pill pill-black">BRAND SYSTEM v1.2</span>
+        <span class="pill pill-red">DE STIJL MODERNISM</span>
+        <span class="pill pill-blue">WOMEN'S PRO SPORTS</span>
+        <span class="pill pill-yellow">PRODUCTION READY</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="pay">PAY</span><span class="by"> -BY- </span><span class="play">PLAY</span>
+      </h1>
+      <p class="hero-tagline">Does pay follow play, and does the pay structure change the answer?</p>
+      <p class="hero-subtitle">
+        A cross-league econometrics and decision-support layer for women's professional sports leagues
+        (PWHL hockey, WNBA basketball, and WPL cricket).
+      </p>
+    </header>
+
+    <!-- Section 1: Executive Summary & Philosophy -->
+    <section class="doc-section">
+      <div class="section-label">01 / Foundation</div>
+      <h2 class="section-title">Brand Purpose &amp; Modernist Geometry</h2>
+      <p class="section-lead">
+        <strong>Pay-by-Play</strong> exists at the intersection of labor econometrics and athletic performance.
+        The visual identity is anchored in the principles of <strong>De Stijl</strong> (The Style) — pioneered by
+        Piet Mondrian and Gerrit Rietveld — which uses asymmetric rectilinear grids, pure primary colors,
+        and bold structural framing to convey mathematical honesty and structural integrity.
+      </p>
+
+      <div class="grid-3">
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <span>METRIC MAPPING</span>
+            <span>01</span>
+          </div>
+          <div>
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚖️</div>
+            <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.1rem;">Pay vs. Play</h3>
+            <p style="font-size: 0.85rem; color: #A1A1AA;">
+              <strong>Pay</strong> (Blue) represents the financial baseline, disclosed salary bands, and cap constraints.
+              <strong>Play</strong> (Red) represents on-field box score production and game-level value.
+            </p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <span>THE VALUE GAP</span>
+            <span>02</span>
+          </div>
+          <div>
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📐</div>
+            <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.1rem;">The Surplus Signal</h3>
+            <p style="font-size: 0.85rem; color: #A1A1AA;">
+              <strong>Canary Yellow</strong> is reserved for the gap metric (value_pct − pay_pct).
+              It signals surplus value, confident bargains, and players whose production outruns their paycheck.
+            </p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <span>ATHLETIC GRID</span>
+            <span>03</span>
+          </div>
+          <div>
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏒</div>
+            <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.1rem;">Pitch &amp; Court Lines</h3>
+            <p style="font-size: 0.85rem; color: #A1A1AA;">
+              Structural ink lines echo both financial data tables and sports playing surfaces:
+              the hockey goal crease, the basketball key, and the cricket batting crease.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- Section 2: Logo Suite -->
+    <section class="doc-section">
+      <div class="section-label">02 / Logo System</div>
+      <h2 class="section-title">The Complete Logo Suite</h2>
+      <p class="section-lead">
+        The brand assets are engineered as infinitely scalable vector SVGs and pixel-perfect high-DPI PNGs
+        for cross-platform deployment across web apps, documentation, mobile shortcuts, and print decks.
+      </p>
+
+      <div class="grid-2" style="margin-bottom: 2rem;">
+        <!-- Complete Logo Mark -->
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <span>COMPLETE LOGO MARK</span>
+            <span>assets/logo-mark.svg</span>
+          </div>
+          <div class="asset-preview">
+            <div style="width: 220px; height: 220px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" role="img" aria-label="Pay-by-Play Logo">
+  <defs>
+    <clipPath id="top-panel">
+      <rect x="36" y="36" width="440" height="300" rx="28"/>
+    </clipPath>
+    <filter id="glow-play" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="16" y="16" width="480" height="480" rx="48" fill="#FAFAF9"/>
+  <rect x="16" y="16" width="480" height="480" rx="48" fill="none" stroke="#0A0A0A" stroke-width="10"/>
+
+  <!-- Upper Visual Panel -->
+  <g clip-path="url(#top-panel)">
+    <!-- Base Paper Fill -->
+    <rect x="36" y="36" width="440" height="300" fill="#FAFAF9"/>
+
+    <!-- Blue Field (Pay) -->
+    <rect x="36" y="36" width="180" height="210" fill="#0047AB"/>
+
+    <!-- Red Field (Play) -->
+    <rect x="216" y="36" width="260" height="210" fill="#E60012"/>
+
+    <!-- Yellow Accent Block -->
+    <rect x="216" y="246" width="124" height="90" fill="#FFDD00"/>
+
+    <!-- Ink Block -->
+    <rect x="340" y="246" width="136" height="90" fill="#0A0A0A"/>
+
+    <!-- Bottom Left Subtle Ledger Lines -->
+    <line x1="60" y1="270" x2="190" y2="270" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+    <line x1="60" y1="300" x2="155" y2="300" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Central Play Arrow (Optically centered at x=346, y=141) -->
+    <polygon points="305,95 305,187 385,141" fill="#FAFAF9" filter="url(#glow-play)"/>
+    <polygon points="305,95 305,187 385,141" fill="none" stroke="#0A0A0A" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Hockey / Basketball Sports Arc Accent -->
+    <path d="M 216,91 A 50 50 0 0 0 216,191" fill="none" stroke="#FAFAF9" stroke-width="5" stroke-dasharray="8 6"/>
+
+    <!-- Grid Dividing Lines -->
+    <line x1="216" y1="36" x2="216" y2="336" stroke="#0A0A0A" stroke-width="10"/>
+    <line x1="36" y1="246" x2="476" y2="246" stroke="#0A0A0A" stroke-width="10"/>
+    <line x1="340" y1="246" x2="340" y2="336" stroke="#0A0A0A" stroke-width="10"/>
+  </g>
+  <!-- Border around panel -->
+  <rect x="36" y="36" width="440" height="300" rx="28" fill="none" stroke="#0A0A0A" stroke-width="8"/>
+
+  <!-- Horizontal Divider Line -->
+  <line x1="36" y1="362" x2="476" y2="362" stroke="#0A0A0A" stroke-width="6"/>
+
+  <!-- Typography: PAY -BY- PLAY -->
+  <text x="256" y="428" text-anchor="middle" font-family="'Archivo', 'Arial Black', Helvetica, sans-serif" font-size="40" font-weight="900" letter-spacing="0.04em">
+    <tspan fill="#0A0A0A">PAY</tspan>
+    <tspan fill="#71717A" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="24" font-weight="700" letter-spacing="0.08em" dy="-3"> -BY- </tspan>
+    <tspan fill="#E60012" dy="3">PLAY</tspan>
+  </text>
+
+  <!-- Subtitle Tagline -->
+  <text x="256" y="468" text-anchor="middle" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="13" font-weight="700" fill="#71717A" letter-spacing="0.26em">
+    WOMEN'S PRO SPORTS ECONOMETRICS
+  </text>
+</svg>
+            </div>
+          </div>
+          <div class="asset-card-footer">
+            <strong>Complete Logo Mark</strong>
+            Features the primary De Stijl graphic tile, the central forward play glyph (▶),
+            and the signature <code>PAY -BY- PLAY</code> typographic lockup.
+          </div>
+        </div>
+
+        <!-- Square App Icon -->
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <span>SQUARE APP ICON</span>
+            <span>assets/logo-icon.svg</span>
+          </div>
+          <div class="asset-preview">
+            <div style="width: 220px; height: 220px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" role="img" aria-label="Pay-by-Play Icon">
+  <defs>
+    <clipPath id="squircle">
+      <rect x="16" y="16" width="480" height="480" rx="64"/>
+    </clipPath>
+    <filter id="subtle-shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect x="16" y="16" width="480" height="480" rx="64" fill="#FAFAF9"/>
+
+  <!-- Clipped Mondrian Grid Canvas -->
+  <g clip-path="url(#squircle)">
+    <!-- Blue Block (Pay / Stability) -->
+    <rect x="16" y="16" width="194" height="280" fill="#0047AB"/>
+
+    <!-- Red Block (Play / Athletic Action) -->
+    <rect x="210" y="16" width="286" height="314" fill="#E60012"/>
+
+    <!-- Play Symbol inside Red Block -->
+    <!-- Centered optical play triangle (pointed right) -->
+    <polygon points="315,100 315,246 430,173" fill="#FAFAF9" filter="url(#subtle-shadow)"/>
+    <polygon points="315,100 315,246 430,173" fill="none" stroke="#0A0A0A" stroke-width="8" stroke-linejoin="round"/>
+
+    <!-- Yellow Block (The Value Gap / Surplus / Bargain) -->
+    <rect x="210" y="330" width="140" height="166" fill="#FFDD00"/>
+
+    <!-- Deep Ink Block (Bottom-Right Anchor) -->
+    <rect x="350" y="330" width="146" height="166" fill="#0A0A0A"/>
+
+    <!-- Bottom-Left Light Block with Econometric Grid Accents -->
+    <rect x="16" y="296" width="194" height="200" fill="#FAFAF9"/>
+    <!-- Subtle horizontal bar lines evoking a salary ledger / data table -->
+    <line x1="44" y1="345" x2="182" y2="345" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round"/>
+    <line x1="44" y1="385" x2="150" y2="385" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round"/>
+    <line x1="44" y1="425" x2="168" y2="425" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Mondrian Master Structural Grid Lines (12px bold black lines) -->
+    <!-- Main Vertical Spine -->
+    <line x1="210" y1="16" x2="210" y2="496" stroke="#0A0A0A" stroke-width="12"/>
+    <!-- Top-Left Horizontal Line -->
+    <line x1="16" y1="296" x2="210" y2="296" stroke="#0A0A0A" stroke-width="12"/>
+    <!-- Bottom-Right Horizontal Line -->
+    <line x1="210" y1="330" x2="496" y2="330" stroke="#0A0A0A" stroke-width="12"/>
+    <!-- Bottom-Right Sub-Vertical Line -->
+    <line x1="350" y1="330" x2="350" y2="496" stroke="#0A0A0A" stroke-width="12"/>
+
+    <!-- Sports Court / Rink Accent: Semi-circle crease cutting across the grid -->
+    <path d="M 210,120 A 53 53 0 0 0 210,226" fill="none" stroke="#FAFAF9" stroke-width="6" stroke-dasharray="10 8"/>
+  </g>
+
+  <!-- Outer Structural Border -->
+  <rect x="16" y="16" width="480" height="480" rx="64" fill="none" stroke="#0A0A0A" stroke-width="12"/>
+</svg>
+            </div>
+          </div>
+          <div class="asset-card-footer">
+            <strong>App Icon &amp; Favicon</strong>
+            Optimized for standalone recognition from 16×16px favicons up to 512×512px app launcher tiles.
+          </div>
+        </div>
+      </div>
+
+      <!-- Wide Banner -->
+      <div class="asset-card" style="margin-bottom: 2rem;">
+        <div class="asset-card-header">
+          <span>WIDE BANNER &amp; WORDMARK</span>
+          <span>assets/logo-wordmark.svg · 1280 × 512</span>
+        </div>
+        <div class="asset-preview" style="padding: 1.5rem 2rem;">
+          <div style="width: 100%; max-width: 800px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 512" width="100%" height="100%" role="img" aria-label="Pay-by-Play Banner">
+  <defs>
+    <clipPath id="panel-wide">
+      <rect x="0" y="0" width="380" height="380" rx="44"/>
+    </clipPath>
+    <filter id="shadow-wide" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Canvas -->
+  <rect width="1280" height="512" fill="#FAFAF9"/>
+
+  <!-- Left Icon Mark -->
+  <g transform="translate(66, 66)">
+    <!-- Container -->
+    <rect width="380" height="380" rx="44" fill="#FAFAF9"/>
+
+    <g clip-path="url(#panel-wide)">
+      <!-- Blue Block -->
+      <rect x="0" y="0" width="155" height="230" fill="#0047AB"/>
+
+      <!-- Red Block -->
+      <rect x="155" y="0" width="225" height="255" fill="#E60012"/>
+
+      <!-- Yellow Block -->
+      <rect x="155" y="255" width="110" height="125" fill="#FFDD00"/>
+
+      <!-- Black Block -->
+      <rect x="265" y="255" width="115" height="125" fill="#0A0A0A"/>
+
+      <!-- Bottom-Left Light Block with Ticks -->
+      <rect x="0" y="230" width="155" height="150" fill="#FAFAF9"/>
+      <line x1="28" y1="270" x2="130" y2="270" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+      <line x1="28" y1="305" x2="105" y2="305" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+      <line x1="28" y1="340" x2="120" y2="340" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+
+      <!-- Play Symbol -->
+      <polygon points="235,75 235,180 325,127" fill="#FAFAF9" filter="url(#shadow-wide)"/>
+      <polygon points="235,75 235,180 325,127" fill="none" stroke="#0A0A0A" stroke-width="6" stroke-linejoin="round"/>
+
+      <!-- Sports Arc -->
+      <path d="M 155,70 A 57 57 0 0 0 155,185" fill="none" stroke="#FAFAF9" stroke-width="5" stroke-dasharray="8 6"/>
+
+      <!-- Master Grid Lines -->
+      <line x1="155" y1="0" x2="155" y2="380" stroke="#0A0A0A" stroke-width="10"/>
+      <line x1="0" y1="230" x2="155" y2="230" stroke="#0A0A0A" stroke-width="10"/>
+      <line x1="155" y1="255" x2="380" y2="255" stroke="#0A0A0A" stroke-width="10"/>
+      <line x1="265" y1="255" x2="265" y2="380" stroke="#0A0A0A" stroke-width="10"/>
+    </g>
+
+    <!-- Outer Border -->
+    <rect width="380" height="380" rx="44" fill="none" stroke="#0A0A0A" stroke-width="10"/>
+  </g>
+
+  <!-- Right Typography & Branding Block -->
+  <g transform="translate(500, 110)">
+    <!-- League Badge Pills -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="82" height="28" rx="6" fill="#0A0A0A"/>
+      <text x="41" y="19" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#FFFFFF">PWHL</text>
+
+      <rect x="94" y="0" width="82" height="28" rx="6" fill="#E60012"/>
+      <text x="135" y="19" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#FFFFFF">WNBA</text>
+
+      <rect x="188" y="0" width="76" height="28" rx="6" fill="#0047AB"/>
+      <text x="226" y="19" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#FFFFFF">WPL</text>
+
+      <text x="280" y="20" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#71717A">· CROSS-LEAGUE DECISION SUPPORT</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="98" font-family="'Archivo', 'Arial Black', Helvetica, sans-serif" font-size="64" font-weight="900" letter-spacing="-0.02em">
+      <tspan fill="#0A0A0A">PAY</tspan>
+      <tspan fill="#71717A" font-family="'JetBrains Mono', monospace" font-size="38" font-weight="700" letter-spacing="0.06em" dy="-4"> -BY- </tspan>
+      <tspan fill="#E60012" dy="4">PLAY</tspan>
+    </text>
+
+    <!-- De Stijl Triple Color Rule -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="220" height="6" fill="#0047AB"/>
+      <rect x="226" y="0" width="60" height="6" fill="#FFDD00"/>
+      <rect x="292" y="0" width="380" height="6" fill="#E60012"/>
+    </g>
+
+    <!-- Core Question Hook -->
+    <text x="0" y="192" font-family="'Archivo', Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0A0A0A">
+      Does pay follow play?
+    </text>
+
+    <!-- Explanatory Subtitle -->
+    <text x="0" y="235" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#71717A">
+      Empirical Bayes value estimation · Two lenses on contract timing · Fairness metrics
+    </text>
+
+    <!-- Formula Tag -->
+    <g transform="translate(0, 260)">
+      <text x="0" y="24" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="600" fill="#0A0A0A">
+        gap = value_pct − pay_pct
+      </text>
+      <text x="260" y="24" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#71717A">
+        (Within-league position percentiles)
+      </text>
+    </g>
+  </g>
+</svg>
+          </div>
+        </div>
+        <div class="asset-card-footer">
+          <strong>Header Wordmark Banner</strong>
+          Engineered for GitHub READMEs, Streamlit landing screens, presentation deck covers, and social cards.
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Two Lenses Emblem -->
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <span>CONCEPT B: TWO LENSES EMBLEM</span>
+            <span>assets/concepts/logo-emblem-lenses.svg</span>
+          </div>
+          <div class="asset-preview">
+            <div style="width: 220px; height: 220px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" role="img" aria-label="Pay-by-Play Two Lenses Emblem">
+  <defs>
+    <clipPath id="circle-clip">
+      <circle cx="256" cy="256" r="216"/>
+    </clipPath>
+    <filter id="emblem-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="64" fill="#FAFAF9"/>
+
+  <!-- Circle Badge -->
+  <g clip-path="url(#circle-clip)">
+    <!-- Upper-Left Hemisphere: Lens A / Pay (Blue) -->
+    <polygon points="40,40 472,40 40,472" fill="#0047AB"/>
+
+    <!-- Lower-Right Hemisphere: Lens B / Play (Red) -->
+    <polygon points="472,40 472,472 40,472" fill="#E60012"/>
+
+    <!-- Sports Pitch Ring Lines -->
+    <circle cx="256" cy="256" r="160" fill="none" stroke="#FAFAF9" stroke-width="4" stroke-opacity="0.4"/>
+    <circle cx="256" cy="256" r="110" fill="none" stroke="#FAFAF9" stroke-width="4" stroke-opacity="0.6"/>
+
+    <!-- Diagonal Black Separator Channel -->
+    <line x1="30" y1="30" x2="482" y2="482" stroke="#0A0A0A" stroke-width="16"/>
+
+    <!-- Central De Stijl Yellow Core (The Gap / Synthesis) -->
+    <circle cx="256" cy="256" r="66" fill="#FFDD00" stroke="#0A0A0A" stroke-width="12" filter="url(#emblem-shadow)"/>
+
+    <!-- Precisely Centered Play Triangle (cx=256, optical center adjusted) -->
+    <!-- Triangle bounding box: x from 242 to 284 (width 42, center at 263, visual optical center aligns at 256) -->
+    <polygon points="242,230 242,282 284,256" fill="#FAFAF9" stroke="#0A0A0A" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Outer Ring Frames -->
+  <circle cx="256" cy="256" r="216" fill="none" stroke="#0A0A0A" stroke-width="14"/>
+  <circle cx="256" cy="256" r="228" fill="none" stroke="#0A0A0A" stroke-width="3"/>
+
+  <!-- Compass / Coordinate Axis Notches (Modernist Econometrics) -->
+  <line x1="256" y1="18" x2="256" y2="34" stroke="#0A0A0A" stroke-width="6"/>
+  <line x1="256" y1="478" x2="256" y2="494" stroke="#0A0A0A" stroke-width="6"/>
+  <line x1="18" y1="256" x2="34" y2="256" stroke="#0A0A0A" stroke-width="6"/>
+  <line x1="478" y1="256" x2="494" y2="256" stroke="#0A0A0A" stroke-width="6"/>
+</svg>
+            </div>
+          </div>
+          <div class="asset-card-footer">
+            <strong>Two Lenses Stadium Emblem</strong>
+            Circular stadium crest directly visualizing Lens A (Pay Rationality) and Lens B (Return on Pay)
+            split across a 45° dynamic boundary with coordinate grid notches.
+          </div>
+        </div>
+
+        <!-- Dark Mode Icon -->
+        <div class="asset-card">
+          <div class="asset-card-header">
+            <span>DARK MODE OPTIMIZED ICON</span>
+            <span>assets/logo-icon-dark.svg</span>
+          </div>
+          <div class="asset-preview dark-preview">
+            <div style="width: 220px; height: 220px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" role="img" aria-label="Pay-by-Play Icon (Dark)">
+  <defs>
+    <clipPath id="squircle-dark">
+      <rect x="16" y="16" width="480" height="480" rx="64"/>
+    </clipPath>
+  </defs>
+
+  <rect x="16" y="16" width="480" height="480" rx="64" fill="#121212"/>
+
+  <g clip-path="url(#squircle-dark)">
+    <!-- Blue Block -->
+    <rect x="16" y="16" width="194" height="280" fill="#4D88FF"/>
+
+    <!-- Red Block -->
+    <rect x="210" y="16" width="286" height="314" fill="#FF3333"/>
+
+    <!-- Play Symbol -->
+    <polygon points="315,100 315,246 430,173" fill="#F5F5F5" stroke="#121212" stroke-width="8" stroke-linejoin="round"/>
+
+    <!-- Yellow Block -->
+    <rect x="210" y="330" width="140" height="166" fill="#FFDD00"/>
+
+    <!-- Dark Surface Block -->
+    <rect x="350" y="330" width="146" height="166" fill="#1E1E22"/>
+
+    <!-- Bottom-Left Charcoal Block -->
+    <rect x="16" y="296" width="194" height="200" fill="#18181B"/>
+    <line x1="44" y1="345" x2="182" y2="345" stroke="#F5F5F5" stroke-width="6" stroke-linecap="round"/>
+    <line x1="44" y1="385" x2="150" y2="385" stroke="#F5F5F5" stroke-width="6" stroke-linecap="round"/>
+    <line x1="44" y1="425" x2="168" y2="425" stroke="#F5F5F5" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Grid Lines -->
+    <line x1="210" y1="16" x2="210" y2="496" stroke="#121212" stroke-width="12"/>
+    <line x1="16" y1="296" x2="210" y2="296" stroke="#121212" stroke-width="12"/>
+    <line x1="210" y1="330" x2="496" y2="330" stroke="#121212" stroke-width="12"/>
+    <line x1="350" y1="330" x2="350" y2="496" stroke="#121212" stroke-width="12"/>
+
+    <!-- Arc -->
+    <path d="M 210,120 A 53 53 0 0 0 210,226" fill="none" stroke="#F5F5F5" stroke-width="6" stroke-dasharray="10 8"/>
+  </g>
+
+  <rect x="16" y="16" width="480" height="480" rx="64" fill="none" stroke="#F5F5F5" stroke-width="10"/>
+</svg>
+            </div>
+          </div>
+          <div class="asset-card-footer">
+            <strong>Dark Theme Icon</strong>
+            Calibrated with higher-vibrancy tints (#FF3333 and #4D88FF) on a slate #121212 ground.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- Section 3: Color Palette -->
+    <section class="doc-section">
+      <div class="section-label">03 / Palette</div>
+      <h2 class="section-title">Color System &amp; Tokens</h2>
+      <p class="section-lead">
+        The palette strictly adheres to authentic De Stijl primaries: high-saturation Red, Cobalt Blue,
+        Canary Yellow, structural Ink Black, and warm Paper White.
+      </p>
+
+      <div class="grid-5" style="margin-bottom: 2rem;">
+        <!-- Blue -->
+        <div class="color-chip">
+          <div class="color-swatch" style="background: #0047AB;"></div>
+          <div class="color-info">
+            <div class="color-name">De Stijl Blue</div>
+            <div class="color-hex">#0047AB</div>
+            <div class="color-role">RGB 0, 71, 171<br>Pay / Salary Base</div>
+          </div>
+        </div>
+
+        <!-- Red -->
+        <div class="color-chip">
+          <div class="color-swatch" style="background: #E60012;"></div>
+          <div class="color-info">
+            <div class="color-name">De Stijl Red</div>
+            <div class="color-hex">#E60012</div>
+            <div class="color-role">RGB 230, 0, 18<br>Play / Production</div>
+          </div>
+        </div>
+
+        <!-- Yellow -->
+        <div class="color-chip">
+          <div class="color-swatch" style="background: #FFDD00;"></div>
+          <div class="color-info">
+            <div class="color-name">Canary Yellow</div>
+            <div class="color-hex">#FFDD00</div>
+            <div class="color-role">RGB 255, 221, 0<br>The Value Gap</div>
+          </div>
+        </div>
+
+        <!-- Ink -->
+        <div class="color-chip">
+          <div class="color-swatch" style="background: #0A0A0A; border-bottom: 1px solid #333;"></div>
+          <div class="color-info">
+            <div class="color-name">Structural Ink</div>
+            <div class="color-hex">#0A0A0A</div>
+            <div class="color-role">RGB 10, 10, 10<br>Grids &amp; Framing</div>
+          </div>
+        </div>
+
+        <!-- Paper -->
+        <div class="color-chip">
+          <div class="color-swatch" style="background: #FAFAF9;"></div>
+          <div class="color-info">
+            <div class="color-name">Paper White</div>
+            <div class="color-hex">#FAFAF9</div>
+            <div class="color-role">RGB 250, 250, 249<br>Canvas Ground</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <h4 style="color: white; margin-bottom: 0.5rem; font-size: 1rem;">Palette Hierarchy &amp; Distribution Rule</h4>
+        <p style="font-size: 0.85rem; color: #A1A1AA; line-height: 1.6;">
+          In any application, maintain the <strong>40-30-15-10-5</strong> balance:
+          <strong>40% Paper White</strong> (open breathing room),
+          <strong>30% Structural Ink</strong> (data lines, text, framing),
+          <strong>15% De Stijl Red</strong> (action callouts, highlights),
+          <strong>10% De Stijl Blue</strong> (foundational anchors, payroll bars), and
+          <strong>5% Canary Yellow</strong> (focal points, value gap badges, bargains).
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4: Typography -->
+    <section class="doc-section">
+      <div class="section-label">04 / Typography</div>
+      <h2 class="section-title">Type Hierarchy &amp; Font Stack</h2>
+      <p class="section-lead">
+        Typography mirrors the dual nature of the product: aggressive athletic sans-serif headers
+        paired with monospaced precision for statistical percentiles and formulas.
+      </p>
+
+      <!-- Archivo Specimen -->
+      <div class="type-specimen">
+        <div class="type-specimen-header">
+          <span>PRIMARY DISPLAY · ARCHIVO (WEIGHT 900 / 800)</span>
+          <span>HEADINGS &amp; LOGO WORDMARKS</span>
+        </div>
+        <div style="font-family: 'Archivo', sans-serif; font-size: 2.5rem; font-weight: 900; color: white; letter-spacing: -0.02em; margin-bottom: 0.5rem;">
+          PAY -BY- PLAY
+        </div>
+        <div style="font-family: 'Archivo', sans-serif; font-size: 1.3rem; font-weight: 800; color: #A1A1AA; margin-bottom: 0.5rem;">
+          DOES PAY FOLLOW PLAY IN WOMEN&rsquo;S PRO LEAGUES?
+        </div>
+        <div style="font-family: 'Archivo', sans-serif; font-size: 0.95rem; font-weight: 600; color: #71717A;">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ · 0123456789 · $ % &amp; / ( )
+        </div>
+      </div>
+
+      <!-- JetBrains Mono Specimen -->
+      <div class="type-specimen">
+        <div class="type-specimen-header">
+          <span>DATA &amp; FORMULA FONT · JETBRAINS MONO (WEIGHT 500 / 700)</span>
+          <span>METRICS, CODE &amp; -BY- CONNECTOR</span>
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.25rem; font-weight: 700; color: #FFDD00; margin-bottom: 0.5rem;">
+          gap = value_pct - pay_pct
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; color: #E4E4E7; margin-bottom: 0.5rem;">
+          PWHL $1,436,173.50 · WNBA 2026 CAP HIT · WPL AUCTION
+        </div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #71717A;">
+          abcdefghijklmnopqrstuvwxyz 0123456789 { [ ] } == &gt;= &lt;=
+        </div>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- Section 5: Brand Rules & Misuse -->
+    <section class="doc-section">
+      <div class="section-label">05 / Governance</div>
+      <h2 class="section-title">Brand Rules: Do&rsquo;s and Don&rsquo;ts</h2>
+      <p class="section-lead">
+        To maintain visual recognition and authoritative econometric presentation, adhere to these guidelines.
+      </p>
+
+      <table class="rules-table">
+        <thead>
+          <tr>
+            <th style="width: 15%;">Status</th>
+            <th style="width: 42%;">Guideline</th>
+            <th style="width: 43%;">Rationale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge-do">✓ DO</span></td>
+            <td>Always include the <strong>-BY-</strong> connector in the complete mark.</td>
+            <td>Reinforces the trademark name and the relationship between compensation and athletic output.</td>
+          </tr>
+          <tr>
+            <td><span class="badge-do">✓ DO</span></td>
+            <td>Maintain the 1:1 square aspect ratio on app icons.</td>
+            <td>Preserves the balanced Mondrian rectilinear cell distribution.</td>
+          </tr>
+          <tr>
+            <td><span class="badge-do">✓ DO</span></td>
+            <td>Keep the Play triangle pointing directly forward (to the right).</td>
+            <td>Represents forward kinetic progress and playback of sports action.</td>
+          </tr>
+          <tr>
+            <td><span class="badge-dont">✗ DON'T</span></td>
+            <td>Never replace primary colors with gradients or pastels.</td>
+            <td>De Stijl requires pure, unadulterated primary colors and stark black structural lines.</td>
+          </tr>
+          <tr>
+            <td><span class="badge-dont">✗ DON'T</span></td>
+            <td>Never remove the outer structural black border.</td>
+            <td>The outer border contains the geometry and prevents bleeding on light surfaces.</td>
+          </tr>
+          <tr>
+            <td><span class="badge-dont">✗ DON'T</span></td>
+            <td>Never rotate or skew the logo mark or typography.</td>
+            <td>All lines must remain purely orthogonal (horizontal and vertical).</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 6: Asset Inventory -->
+    <section class="doc-section">
+      <div class="section-label">06 / Asset Matrix</div>
+      <h2 class="section-title">Production Asset Inventory</h2>
+      <p class="section-lead">
+        Summary of all generated files in the <code>assets/</code> directory ready for deployment.
+      </p>
+
+      <table class="rules-table">
+        <thead>
+          <tr>
+            <th>Filename</th>
+            <th>Type</th>
+            <th>Dimensions</th>
+            <th>Primary Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>assets/logo-mark.svg</code></td>
+            <td>Vector SVG</td>
+            <td>512 × 512</td>
+            <td>Primary complete logo mark with <code>PAY -BY- PLAY</code> lockup.</td>
+          </tr>
+          <tr>
+            <td><code>assets/logo-icon.svg</code></td>
+            <td>Vector SVG</td>
+            <td>512 × 512</td>
+            <td>Standalone app icon &amp; favicon glyph.</td>
+          </tr>
+          <tr>
+            <td><code>assets/logo-icon-dark.svg</code></td>
+            <td>Vector SVG</td>
+            <td>512 × 512</td>
+            <td>Dark-mode calibrated app icon.</td>
+          </tr>
+          <tr>
+            <td><code>assets/logo-wordmark.svg</code></td>
+            <td>Vector SVG</td>
+            <td>1280 × 512</td>
+            <td>Horizontal banner for GitHub README, headers, and slides.</td>
+          </tr>
+          <tr>
+            <td><code>assets/concepts/logo-emblem-lenses.svg</code></td>
+            <td>Vector SVG</td>
+            <td>512 × 512</td>
+            <td>Two Lenses circular stadium/rink crest.</td>
+          </tr>
+          <tr>
+            <td><code>assets/favicon-32.png</code></td>
+            <td>Raster PNG</td>
+            <td>32 × 32</td>
+            <td>Browser tab favicon (configured in Streamlit).</td>
+          </tr>
+          <tr>
+            <td><code>assets/favicon-64.png</code></td>
+            <td>Raster PNG</td>
+            <td>64 × 64</td>
+            <td>Retina browser favicon.</td>
+          </tr>
+          <tr>
+            <td><code>assets/logo-icon-128.png</code></td>
+            <td>Raster PNG</td>
+            <td>128 × 128</td>
+            <td>App dock icon &amp; profile avatar.</td>
+          </tr>
+          <tr>
+            <td><code>assets/logo-icon-256.png</code></td>
+            <td>Raster PNG</td>
+            <td>256 × 256</td>
+            <td>Desktop application launcher icon.</td>
+          </tr>
+          <tr>
+            <td><code>assets/logo-mark-512.png</code></td>
+            <td>Raster PNG</td>
+            <td>512 × 512</td>
+            <td>High-resolution complete mark with <code>PAY -BY- PLAY</code>.</td>
+          </tr>
+          <tr>
+            <td><code>assets/logo-wordmark-1280.png</code></td>
+            <td>Raster PNG</td>
+            <td>1280 × 512</td>
+            <td>Retina banner image for social cards and documentation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #121214; padding: 2rem 3rem; border-top: 1px solid #27272A; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #71717A;">
+      <div>
+        © 2026 <strong>Pay-by-Play</strong> · Cross-League Econometrics
+      </div>
+      <div>
+        Specification v1.2 · Prepared for Stakeholders &amp; Contributors
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

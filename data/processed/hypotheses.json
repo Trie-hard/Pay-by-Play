@@ -1,0 +1,28 @@
+{
+  "h1_pwhl_draft": {
+    "n": 42,
+    "spearman_pay_vs_draft_pick": -0.9215701805444864,
+    "p_draft": 4.949940580995275e-18,
+    "spearman_pay_vs_value": 0.4382124082798576,
+    "p_value": 0.0037006172038335393,
+    "production_beats_draft_slot": false
+  },
+  "h2_wnba_raise": {
+    "n": 182,
+    "mean_raise_usd": 384539.7582417582,
+    "median_raise_usd": 273891.5,
+    "r_squared_raise_on_prior_value": 0.2689796395745584,
+    "slope_usd_per_value_pct": 6215.149774136293,
+    "p_value": 6.400761437042736e-14,
+    "share_of_raise_variance_not_linear_in_prior_value": 0.7310203604254417,
+    "source": "Her Hoop Stats 2025 and 2026 cap hits, matched by player name"
+  },
+  "wpl": {
+    "auction_rows": 84,
+    "matched_2025_26": 60,
+    "matched_2024_25": 53,
+    "spearman_fairness_2025_26": 0.4696496365457497,
+    "source_pay": "Cricbuzz WPL 2026 auction team pages (sold and retained prices, INR)",
+    "source_value": "Cricsheet wpl_json.zip phase runs above baseline plus phase-valued wickets"
+  }
+}

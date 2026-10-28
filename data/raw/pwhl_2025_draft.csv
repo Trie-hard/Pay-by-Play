@@ -1,0 +1,49 @@
+Round | Pick,Team,name,Position,Previous Team (League),Nationality,draft_pick,name_key
+1 | 1,New York Sirens,Kristýna Kaltounková,F,Colgate University (NCAA),CZE,1,kristyna kaltounkova
+1 | 2,Boston Fleet,Haley Winn,D,Clarkson University (NCAA),USA,2,haley winn
+1 | 3,New York Sirens (via TOR),Casey O'Brien,F,University of Wisconsin (NCAA),USA,3,casey o'brien
+1 | 4,Montréal Victoire,Nicole Gosling,D,Clarkson University (NCAA),CAN,4,nicole gosling
+1 | 5,Ottawa Charge,Rory Guilday,D,Cornell University (NCAA),USA,5,rory guilday
+1 | 6,Minnesota Frost,Kendall Cooper,D,Quinnipiac University (NCAA),CAN,6,kendall cooper
+1 | 7,PWHL Vancouver,Michelle Karvinen,F,Frölunda HC (SDHL),FIN/DEN,7,michelle karvinen
+1 | 8,PWHL Seattle,Jenna Buglioni,F,Ohio State University (NCAA),CAN,8,jenna buglioni
+2 | 9,New York Sirens,Anne Cherkowski,F,Clarkson University (NCAA),CAN,9,anne cherkowski
+2 | 10,Boston Fleet,Ella Huber,F,University of Minnesota (NCAA),USA,10,ella huber
+2 | 11,Toronto Sceptres,Emma Gentry,F,St. Cloud State University (NCAA),USA,11,emma gentry
+2 | 12,Montréal Victoire,Natalie Mlynkova,F,University of Minnesota (NCAA),CZE,12,natalie mlynkova
+2 | 13,Ottawa Charge,Anna Shokhina,F,Dynamo-Neva St. Petersburg (ZhHL),RUS,13,anna shokhina
+2 | 14,Minnesota Frost,Abby Hustler,F,St. Lawrence University (NCAA),CAN,14,abby hustler
+2 | 15,PWHL Seattle,Hannah Murphy,G,Colgate University (NCAA),CAN,15,hannah murphy
+2 | 16,Toronto Sceptres (via VAN),Kiara Zanon,F,Ohio State University (NCAA),USA,16,kiara zanon
+3 | 17,New York Sirens,Makenna Webster,F,Ohio State University (NCAA),USA,17,makenna webster
+3 | 18,Boston Fleet,Olivia Mobley,F,University of Minnesota Duluth (NCAA),USA,18,olivia mobley
+3 | 19,PWHL Vancouver (via TOR),Nina Jobst-Smith,D,University of Minnesota Duluth (NCAA),GER/CAN,19,nina jobst-smith
+3 | 20,Montréal Victoire,Skylar Irving,F,Northeastern University (NCAA),USA,20,skylar irving
+3 | 21,Ottawa Charge,Sarah Wozniewicz,F,University of Wisconsin (NCAA),CAN,21,sarah wozniewicz
+3 | 22,Minnesota Frost,Anna Segedi,F,St. Lawrence University (NCAA),USA/CHI,22,anna segedi
+3 | 23,Toronto Sceptres (via VAN),Clara Van Wieren,F,University of Minnesota Duluth (NCAA),USA,23,clara van wieren
+3 | 24,PWHL Seattle,Lily Delianedis,F,Cornell University (NCAA),USA,24,lily delianedis
+4 | 25,New York Sirens,Dayle Ross,D,St. Cloud State University (NCAA),CAN,25,dayle ross
+4 | 26,Boston Fleet,Riley Brengman,D,Ohio State University (NCAA),USA,26,riley brengman
+4 | 27,New York Sirens (via TOR),Maddi Wheeler,F,Ohio State University (NCAA),CAN,27,maddi wheeler
+4 | 28,New York Sirens (via MTL),Callie Shanahan,G,Boston University (NCAA),USA,28,callie shanahan
+4 | 29,Ottawa Charge,Peyton Hemp,F,University of Minnesota (NCAA),USA,29,peyton hemp
+4 | 30,Minnesota Frost,Ava Rinker,D,University of Connecticut (NCAA),USA,30,ava rinker
+4 | 31,PWHL Seattle,Jada Habisch,F,University of Connecticut (NCAA),USA,31,jada habisch
+4 | 32,PWHL Vancouver,Brianna Brooks,F,Penn State University (NCAA),CAN,32,brianna brooks
+5 | 33,New York Sirens,Anna Bargman,F,Yale University (NCAA),USA,33,anna bargman
+5 | 34,Boston Fleet,Abby Newhook,F,Boston College (NCAA),CAN,34,abby newhook
+5 | 35,Toronto Sceptres,Sara Hjalmarsson,F,Linköping HC (SDHL),SWE,35,sara hjalmarsson
+5 | 36,Montréal Victoire,Maya Labad,F,Quinnipiac University (NCAA),CAN,36,maya labad
+5 | 37,Ottawa Charge,Sanni Ahola,G,St. Cloud State University (NCAA),FIN/DEN,37,sanni ahola
+5 | 38,Minnesota Frost,Vanessa Upson,F,Mercyhurst University (NCAA),CAN,38,vanessa upson
+5 | 39,PWHL Vancouver,Madison Samoskevich,D,Quinnipiac University (NCAA),USA,39,madison samoskevich
+5 | 40,PWHL Seattle,Lyndie Lobdell,D,Penn State University (NCAA),USA,40,lyndie lobdell
+6 | 41,New York Sirens,Kaley Doyle,G,Quinnipiac University (NCAA),USA,41,kaley doyle
+6 | 42,Boston Fleet,Amanda Thiele,G,Ohio State University (NCAA),USA,42,amanda thiele
+6 | 43,Toronto Sceptres,Hanna Baskin,D,University of Minnesota Duluth (NCAA),USA,43,hanna baskin
+6 | 44,Montréal Victoire,Tamara Giaquinto,D,Boston University (NCAA),CAN,44,tamara giaquinto
+6 | 45,Ottawa Charge,Fanuza Kadirova,F,Dynamo-Neva St. Petersburg (ZhHL),RUS,45,fanuza kadirova
+6 | 46,Minnesota Frost,Brooke Becker,D,Providence College (NCAA),USA,46,brooke becker
+6 | 47,PWHL Seattle,Olivia Wallin,F,University of Minnesota Duluth (NCAA),CAN,47,olivia wallin
+6 | 48,PWHL Vancouver,Chanreet Bassi,F,University of British Columbia (U Sports),CAN,48,chanreet bassi

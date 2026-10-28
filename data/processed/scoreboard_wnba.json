@@ -1,0 +1,8 @@
+{
+  "league": "WNBA",
+  "within_league_fairness_spearman": 0.42202073865949874,
+  "misallocation_index": 0.4450422166245021,
+  "confident_bargains": 19,
+  "n_players": 160,
+  "generated_at": "2026-10-27T05:26:31.864341+00:00"
+}

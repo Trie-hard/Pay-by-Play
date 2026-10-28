@@ -1,0 +1,83 @@
+{
+  "value_definitions": [
+    {
+      "league": "PWHL",
+      "value_definition": "A",
+      "definition_label": "box_per_game",
+      "n": 194,
+      "spearman_fairness": 0.5979943221099369,
+      "misallocation_index": 0.6182609799204095
+    },
+    {
+      "league": "WNBA",
+      "value_definition": "A",
+      "definition_label": "per_minute_box",
+      "n": 156,
+      "spearman_fairness": 0.42202073865949874,
+      "misallocation_index": 0.4450422166245021
+    },
+    {
+      "league": "PWHL",
+      "value_definition": "B",
+      "definition_label": "box_plus_mean_plus_minus",
+      "n": 194,
+      "spearman_fairness": 0.5676853550392111,
+      "misallocation_index": 0.6444789391254344
+    },
+    {
+      "league": "WNBA",
+      "value_definition": "B",
+      "definition_label": "box_plus_mean_plus_minus",
+      "n": 156,
+      "spearman_fairness": 0.19089280409753803,
+      "misallocation_index": 0.5483962237100108
+    },
+    {
+      "league": "PWHL",
+      "value_definition": "C",
+      "definition_label": "position_weight_sensitivity",
+      "n": 194,
+      "spearman_fairness": 0.5835953840152053,
+      "misallocation_index": 0.6256033379346335
+    },
+    {
+      "league": "WNBA",
+      "value_definition": "C",
+      "definition_label": "minutes_weighted",
+      "n": 156,
+      "spearman_fairness": 0.585359218187316,
+      "misallocation_index": 0.5059631692019234
+    }
+  ],
+  "yoy_value": [
+    {
+      "league": "PWHL",
+      "n": 131,
+      "spearman_value_pct": 0.6791474415460229,
+      "p_value": 4.841537588287903e-19,
+      "id": "player_id"
+    },
+    {
+      "league": "WNBA",
+      "n": 146,
+      "spearman_value_pct": 0.7382877459126105,
+      "p_value": 2.1058273894230183e-26,
+      "id": "athlete_id"
+    }
+  ],
+  "pwhl_split_half": {
+    "metric": "goals_per_game_odd_vs_even_game_id",
+    "n": 152,
+    "spearman": 0.47774924262931245,
+    "p_value": 4.850384667439931e-10
+  },
+  "wnba_h2_pay_vs_prior_value": {
+    "n": 146,
+    "r_squared": 0.32448535790896516,
+    "slope_usd_per_value_pct": 7333.834142589529,
+    "intercept_usd": 177044.22021194658,
+    "p_value": 6.224745074677433e-14,
+    "residual_sd_usd": 315380.5075066411,
+    "share_unexplained": 0.675514642091035
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "league": "PWHL",
+  "within_league_fairness_spearman": 0.5979943221099369,
+  "misallocation_index": 0.6182609799204095,
+  "confident_bargains": 53,
+  "n_players": 194,
+  "generated_at": "2026-10-27T05:25:48.836665+00:00"
+}

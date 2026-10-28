@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.env.*
+
+# Local IDE / agent artifacts
+assets/test_by_option_*.png
+
+# Optional: large scratch downloads (regenerate via fetch_data.py)
+# data/raw/wpl_json.zip

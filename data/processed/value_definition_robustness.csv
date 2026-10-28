@@ -1,0 +1,7 @@
+league,value_definition,definition_label,n,spearman_fairness,misallocation_index
+PWHL,A,box_per_game,194,0.5979943221099369,0.6182609799204095
+WNBA,A,per_minute_box,156,0.42202073865949874,0.4450422166245021
+PWHL,B,box_plus_mean_plus_minus,194,0.5676853550392111,0.6444789391254344
+WNBA,B,box_plus_mean_plus_minus,156,0.19089280409753803,0.5483962237100108
+PWHL,C,position_weight_sensitivity,194,0.5835953840152053,0.6256033379346335
+WNBA,C,minutes_weighted,156,0.585359218187316,0.5059631692019234
